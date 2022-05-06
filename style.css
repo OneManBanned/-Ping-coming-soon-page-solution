@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
+
+:root {
+    --Blue-clr: hsl(223, 87%, 63%);
+    --Pale-Blue-clr: hsl(223, 100%, 88%);
+    --Light-Red-clr: hsl(354, 100%, 66%);
+    --Gray-clr: hsl(0, 0%, 59%);
+    --Very-Dark-Blue-clr: hsl(209, 33%, 12%);
+}
+
+/*TYPOGRAPHY*/
+
+main {
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--Very-Dark-Blue-clr);
+}
+
+h1>span {
+    color: var(--Blue-clr);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: var(--Gray-clr);
+}
+
+h2>span {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--Very-Dark-Blue-clr);
+}
+
+h3 {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue-clr);
+}
+
+::placeholder {
+    color: var(--Pale-Blue-clr);
+    font-weight: 300;
+    font-size: .73rem;
+}
+
+input {
+    font-weight: 300;
+    font-size: 0.73rem;
+}
+
+button {
+    color: white;
+    font-weight: 300;
+    font-size: .73rem;
+}
+
+.copyright {
+    color: var(--Gray-clr);
+    font-weight: 300;
+    font-size: .6rem;
+}
+
+.error-message,
+.error-empty {
+    font-size: .6rem;
+    color: var(--Light-Red-clr);
+}
+
+/*LAYOUT*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 85%;
+    height: 2.25rem;
+    outline: none;
+    border: 1px solid var(--Pale-Blue-clr);
+    padding-left: 1.5rem;
+    border-radius: 2.5em;
+
+}
+
+button {
+    outline: none;
+    width: 85%;
+    height: 2.25rem;
+    background-color: var(--Blue-clr);
+    border: none;
+    border-radius: 2.5em;
+    margin-top: .75rem;
+    margin-bottom: 4rem;
+    box-shadow: 2px 5px 15px var(--Pale-Blue-clr);
+}
+
+img {
+    width: 95%;
+    padding-bottom: 7.25rem;
+}
+
+footer {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 39%;
+    margin-bottom: 1.5rem;
+    justify-items: center;
+    align-content: center;
+}
+
+svg {
+    height: 55%;
+    width: auto;
+}
+
+.logo {
+    width: 87%;
+    border: 0.0001em solid hsla(0, 0%, 59%, .25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+path {
+    fill: var(--Blue-clr);
+}
+
+.error-message {
+    margin-top: .25rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-empty {
+    margin-top: .25rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+@media (min-width: 376px) {
+
+    /*TYPOGRAPHY*/
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    h1>span {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h2>span {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    /*LAYOUT*/
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    main {
+        padding-top: 4.5rem;
+        width: 55%;
+    }
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    form {
+        position: relative;
+    }
+
+    input {
+        width: 60%;
+        margin-right: .5rem;
+        height: 2.75rem;
+    }
+
+    button {
+        width: 30%;
+        height: 2.75rem;
+    }
+
+    footer {
+        width: 20%;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        padding-bottom: 4rem;
+    }
+
+    .logo {
+        width: 90%;
+    }
+
+    .error-message {
+        position: absolute;
+        left: 8%;
+        top: 48%;
+    }
+
+    .error-empty {
+        position: absolute;
+        left: 8%;
+        top: 48%;
+    }
+
+    /*PSUEDO-ELEMENTS*/
+
+    button:hover {
+        cursor: pointer;
+        background-color: hsl(223, 63%, 57%);
+    }
+
+    .logo:hover {
+        background-color: var(--Blue-clr);
+    }
+
+    .logo:hover path {
+        fill: white;
+    }
+}
